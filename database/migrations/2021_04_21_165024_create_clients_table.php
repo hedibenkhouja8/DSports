@@ -17,6 +17,8 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('prenom');
+            $table->string('emailclient');
+            $table->string('passeclient');
             $table->integer('age');
             $table->integer('code_coach')->unsigned();
             $table->enum('sport',['yoga','danse','box']);
