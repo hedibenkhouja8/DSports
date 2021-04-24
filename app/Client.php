@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     //
-    public function coach(){
-        return $this->belongsTo('App\coach' , 'code_coach');
+    public function coaches(){
+        return $this->belongsTo('App\Coach');
     }
 }

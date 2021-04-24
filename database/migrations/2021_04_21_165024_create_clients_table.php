@@ -20,12 +20,12 @@ class CreateClientsTable extends Migration
             $table->string('emailclient');
             $table->string('passeclient');
             $table->integer('age');
-            $table->integer('code_coach')->unsigned();
+            $table->integer('coach_id')->unsigned();
             $table->enum('sport',['yoga','danse','box']);
             $table->string('datedebutabonnement');
             $table->string('datefinabonnement');
             $table->timestamps();
-            $table->foreign('code_coach')->references('id')->on('coaches')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 
