@@ -7,10 +7,10 @@ use Faker\Generator as Faker;
 
 $factory->define(Coach::class, function (Faker $faker) {
     return [
-        'nomcoach'=> $faker->word,
-        'prenomcoach'=> $faker->word,
-        'emailcoach'=> $faker->word,
-        'passcoach'=> $faker->word,
+        'nomcoach'=> $faker->firstNameMale,
+        'prenomcoach'=> $faker->lastName,
+        'emailcoach'=> $faker->email,
+        'passcoach'=> $faker->password,
         'agecoach'=> $faker->randomDigit,
         'specialite'=> $faker->randomElement($array = array ('box','danse','yoga')),
         'created_at'=>now()
