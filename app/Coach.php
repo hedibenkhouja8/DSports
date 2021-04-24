@@ -10,4 +10,7 @@ class Coach extends Model
     {
         return $this->hasMany('App\Client');
     }
+    public function admins(){
+        return $this->belongsTo('App\Admin');
+    }
 }
