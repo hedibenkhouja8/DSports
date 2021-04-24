@@ -1,5 +1,6 @@
 <?php
-
+use App\Client;
+use App\Coach;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+         $this->call(CoachesTableSeeder::class);
+         $this->call(ClientsTableSeeder::class);
+         //php artisan migrate:fresh --seed
     }
 }
