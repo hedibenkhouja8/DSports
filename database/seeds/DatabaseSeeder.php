@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(CoachesTableSeeder::class);
          $this->call(ClientsTableSeeder::class);
+         $this->call(AdminsTableSeeder::class);
          //php artisan migrate:fresh --seed
     }
 }
+
