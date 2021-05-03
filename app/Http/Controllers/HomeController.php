@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Client;
+use App\Coach;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-    $this->middleware('auth');
+   // $this->middleware('auth')->except('welcome');
     }
 
     /**
@@ -27,6 +28,11 @@ class HomeController extends Controller
     }
     public function welcome()
     {
-        return view('welcome');
+        $coaches = Coach::inRandomOrder()->limit(5)->get();
+        $clients = Client::inRandomOrder()->limit(6)->get();
+        return view('welcome', [
+            'coaches' => $coaches,
+            'clients' => $clients
+        ]);
     }
 }

@@ -13,7 +13,8 @@ $factory->define(Client::class, function (Faker $faker) {
         'emailclient'=> $faker->email,
         'passeclient'=> $faker->password,
         'age'=> $faker->randomDigit,
-        'sport'=> $faker->randomElement($array = array ('yoga','danse','box')),
+        'picture' => $faker->imageUrl,
+        'sport'=> $faker->randomElement($array = array ('Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training')),
         'datedebutabonnement'=> $faker->date($format = 'Y-m-d', $max = 'now'),
         'datefinabonnement'=> $faker->date($format = 'Y-m-d', $max = 'now'),
         'coach_id' => Coach::get('id')->random()
