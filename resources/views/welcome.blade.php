@@ -85,11 +85,7 @@
                   
                 </div>
 
-                <ul>
-                    @foreach ($gestioncbs as $gestioncb)
-                        <li>{{ $gestioncb['nom'] }} ({{ $gestioncb['prenom'] }}) {{ $gestioncb['datenaissance'] }} {{ $gestioncb['adress'] }}{{ $gestioncb['tel'] }}</li>
-                    @endforeach
-                </ul>
+               
             </div>
         </div>
     </body>

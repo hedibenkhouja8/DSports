@@ -1,0 +1,13 @@
+.admin ul {
+    
+    list-style-type: none;
+   
+  
+    display: grid;
+    grid-template-columns: 60px 60px;
+ 
+  
+}
+.admin img {
+    height:250px; 
+}
