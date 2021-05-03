@@ -12,7 +12,8 @@ $factory->define(Coach::class, function (Faker $faker) {
         'emailcoach'=> $faker->email,
         'passcoach'=> $faker->password,
         'agecoach'=> $faker->randomDigit,
-        'specialite'=> $faker->randomElement($array = array ('box','danse','yoga')),
+        'Description'=> $faker->sentence($nbWords = 10, $variableNbWords = true),
+        'specialite'=> $faker->randomElement($array = array ('Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training')),
         'created_at'=>now()
     ];
 });
