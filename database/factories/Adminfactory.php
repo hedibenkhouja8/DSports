@@ -11,6 +11,7 @@ $factory->define(Admin::class, function (Faker $faker) {
         'prenomadmin'=> $faker->lastName,
         'emailadmin'=> $faker->email,
         'passadmin'=> $faker->password,
+        'picture' => $faker->imageUrl,
         'created_at'=>now()
     ];
 });

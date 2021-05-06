@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+   
     public function welcome()
     {
         $coaches = Coach::inRandomOrder()->limit(5)->get();
@@ -35,13 +36,5 @@ class HomeController extends Controller
             'clients' => $clients
         ]);
     }
-    public function admin()
-    {
-        $coaches = Coach::inRandomOrder()->limit(5)->get();
-        $clients = Client::inRandomOrder()->limit(6)->get();
-        return view('admin', [
-            'coaches' => $coaches,
-            'clients' => $clients
-        ]);
-    }
+   
 }
