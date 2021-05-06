@@ -11,28 +11,29 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/all.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+<!-- style compilee -->
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+       <!-- bootstrap css -->
+     
       <!-- owl css -->
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      
       <!-- style css -->
       <link rel="stylesheet" href="css/style.css">
       <!-- responsive-->
       <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
-      <link rel="stylesheet" href="css/responsive.css">
-      <link rel="stylesheet" href="css/reset.css">
+    
       <!-- awesome fontfamily -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]--> 
 </head>
 <body>
     <div id="app">
@@ -114,31 +115,6 @@
     </div>
 </body>
  <!-- Javascript files-->
- <script src="js/jquery.min.js"></script>
- <script src="js/popper.min.js"></script>
- <script src="js/bootstrap.bundle.min.js"></script>
- <script src="js/owl.carousel.min.js"></script>
- <script src="js/custom.js"></script>
- <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-
- <script src="js/jquery-3.0.0.min.js"></script>
- <script type="text/javascript">
-     $(document).ready(function() {
-         $("#sidebar").mCustomScrollbar({
-             theme: "minimal"
-         });
-
-         $('#dismiss, .overlay').on('click', function() {
-             $('#sidebar').removeClass('active');
-             $('.overlay').removeClass('active');
-         });
-
-         $('#sidebarCollapse').on('click', function() {
-             $('#sidebar').addClass('active');
-             $('.overlay').addClass('active');
-             $('.collapse.in').toggleClass('in');
-             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-         });
-     });
- </script>
+ 
+ 
 </html>
