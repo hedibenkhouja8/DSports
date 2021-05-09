@@ -93,7 +93,7 @@
         </main>
            {{------------------------------------------------ Footer------------------------------------------------}}
            <footer>
-            <div class="footer">
+            <div>
                 <div class="copyright">
                     <div class="container">
                         <div class="row">

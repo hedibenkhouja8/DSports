@@ -1,7 +1,39 @@
 @extends('layouts.app')
 @section('content')
 
-@foreach ($admins as $admin)
+
+    <h2 class="h2">Welcome Boss <strong>{{ Auth::user()->name }}</strong></h2>
+   
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="/admin-dashboard">
+                <span data-feather="home"></span>
+                Coaches <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Clients
+              </a>
+            </li>
+           
+          </ul>
+  
+        
+         
+        </div>
+      </nav>
+ Here you put tables oussema   
+    </div>
+  </div>
+  
+<?php
+/* @foreach ($admins as $admin)
 <li>
     <h2 class="h2">Welcome Boss <strong>{{ $admin->nomadmin }}</strong></h2>
     <img src="{{ $admin->picture }}" style="height: 250px;" />
@@ -80,8 +112,8 @@
     
 </table>
 
-</div>
-
+</div>*/
+?>
 
         
 @endsection

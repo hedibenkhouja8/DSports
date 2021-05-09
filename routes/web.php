@@ -15,21 +15,18 @@ use App\Coach;
 use App\Admin;
 
 Route::get('/','HomeController@Welcome');
+//Route::get('/admin','AdminController@admin');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/admin', 'AdminController@adminview')->name('admin');
 
 
 Route::get('/admin', function () {
     
-    $coaches = Coach::inRandomOrder()->limit(5)->get();
     $admins = Admin::inRandomOrder()->limit(1)->get();
-    $clients = Client::inRandomOrder()->limit(6)->get();
-    return view('admin.dashboard', [
-        'coaches' => $coaches,
-        'clients' => $clients,
-        'admins' => $admins
-    ]);
+  
+    return view('admin.dashboard');
 });
