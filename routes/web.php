@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/admin', 'AdminController@adminview')->name('admin');
 
 
-Route::get('/admin', function () {
+Route::get('/admin-dashboard', function () {
     
     $admins = Admin::inRandomOrder()->limit(1)->get();
   

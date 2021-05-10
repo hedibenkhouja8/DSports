@@ -20,6 +20,7 @@ class CreateAdminsTable extends Migration
             $table->string('emailadmin');
             $table->string('passadmin');
             $table->string('picture');
+            $table->string('role')->default('admin');
             $table->timestamps();
         });
     }
