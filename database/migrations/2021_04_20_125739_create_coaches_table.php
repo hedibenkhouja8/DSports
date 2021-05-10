@@ -22,6 +22,7 @@ class CreateCoachesTable extends Migration
             $table->integer('agecoach');
             $table->string('description');
             $table->enum('specialite',['Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training']);
+            $table->string('role')->default('coach');
 
             $table->timestamps();
         });

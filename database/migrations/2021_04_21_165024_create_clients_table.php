@@ -27,6 +27,7 @@ class CreateClientsTable extends Migration
             $table->string('picture');
             $table->timestamps();
             $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('restrict')->onUpdate('restrict');
+            $table->string('role')->default('client');
         });
     }
 
