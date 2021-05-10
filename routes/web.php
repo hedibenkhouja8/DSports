@@ -29,4 +29,4 @@ Route::get('/admin-dashboard', function () {
     $admins = Admin::inRandomOrder()->limit(1)->get();
   
     return view('admin.dashboard');
-});
+})->middleware('auth', 'admin');;
