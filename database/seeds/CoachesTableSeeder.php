@@ -11,6 +11,6 @@ class CoachesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Coach::class, 10)->create();
+        factory(Coach::class, 50)->create();
     }
 }

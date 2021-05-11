@@ -35,10 +35,10 @@
         @endforeach
        
     </tbody>
-    <div class="mx-auto"  style="width: 200px;">
-        {{ $clients->links() }}
-    </div>
+   
     
 </table>
-
+<div class="mx-auto"  style="width: 200px;">
+    {{ $clients->links() }}
+</div>
 @endsection
