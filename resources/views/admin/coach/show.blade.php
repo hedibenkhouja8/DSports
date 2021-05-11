@@ -9,7 +9,7 @@
       <li ><strong>speciality:</strong></i> {{ $coach->specialite }}</li>
       <br>
       <li ><strong>Age:</strong></i> {{ $coach->agecoach }}</li> <br>
-      <li ><strong>Address:</strong></i> {{ $coach->adress }}</li> <br>
+      <li ><strong>Address:</strong></i> {{ $coach->address }}</li> <br>
       <li ><strong>Number:</strong></i> {{ $coach->phone }}</li> <br>
       <li ><strong>Email:</strong></i> {{ $coach->emailcoach }}</li> <br>
          </div>
