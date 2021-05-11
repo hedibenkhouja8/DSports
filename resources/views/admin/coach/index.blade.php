@@ -26,7 +26,7 @@
 
 
         <td> 
-            <a href=""><i class="far fa-eye"></i></a>
+            <a href="{{ route('coaches.show', ['coach' => $coach->id]) }}"><i class="far fa-eye"></i></a>
             <a href=""><i class="far fa-trash-alt"></i></a> 
             <a href=""><i class="fas fa-edit"></i> 
         </td>

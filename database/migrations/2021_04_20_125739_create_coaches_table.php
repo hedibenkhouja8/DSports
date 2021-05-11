@@ -20,6 +20,10 @@ class CreateCoachesTable extends Migration
             $table->string('emailcoach');
             $table->string('passcoach');
             $table->integer('agecoach');
+            $table->string('picture');
+            $table->string('address');
+            $table->string('phone');
+            
             $table->string('description');
             $table->enum('specialite',['Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training']);
             $table->string('role')->default('coach');

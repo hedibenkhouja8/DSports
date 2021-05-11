@@ -10,8 +10,11 @@ $factory->define(Coach::class, function (Faker $faker) {
         'nomcoach'=> $faker->firstNameMale,
         'prenomcoach'=> $faker->lastName,
         'emailcoach'=> $faker->email,
+        'picture'=> $faker->imageUrl,
         'passcoach'=> $faker->password,
         'agecoach'=> $faker->randomDigit,
+        'address' => $faker->address,
+        'phone' => $faker->e164PhoneNumber,
         'Description'=> $faker->sentence($nbWords = 10, $variableNbWords = true),
         'specialite'=> $faker->randomElement($array = array ('Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training')),
         'created_at'=>now()

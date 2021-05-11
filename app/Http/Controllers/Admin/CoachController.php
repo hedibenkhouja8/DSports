@@ -47,7 +47,8 @@ class CoachController extends Controller
      */
     public function show(Coach $coach)
     {
-        //
+        
+        return view('admin.coach.show', ['coach' => $coach]);
     }
 
     /**

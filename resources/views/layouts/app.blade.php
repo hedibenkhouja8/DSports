@@ -21,7 +21,7 @@
     
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
        <!-- bootstrap css -->
-     
+       <script src="https://kit.fontawesome.com/141a6218e0.js" crossorigin="anonymous"></script>
       <!-- owl css -->
       
       <!-- style css -->

@@ -24,6 +24,8 @@ class CreateClientsTable extends Migration
             $table->enum('sport',['Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training']);
             $table->string('datedebutabonnement');
             $table->string('datefinabonnement');
+            $table->string('address');
+            $table->string('phone');
             $table->string('picture');
             $table->timestamps();
             $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('restrict')->onUpdate('restrict');
