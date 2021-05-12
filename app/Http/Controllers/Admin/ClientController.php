@@ -36,7 +36,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+ 
     }
 
     /**

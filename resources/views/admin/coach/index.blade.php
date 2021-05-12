@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 @section('main')
+<a href="{{ route('coaches.create') }}" class="btn btn-outline-primary btn-lg float-right" ><i class="fas fa-user-plus"></i>Ajouter un nouveau coach</a>
+<br>
 <h2>This Is Your Coaches List:</h2>
 <table class="table table-striped table-light container">
     <thead class="thead-dark">
