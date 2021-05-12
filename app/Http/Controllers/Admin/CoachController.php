@@ -38,30 +38,45 @@ class CoachController extends Controller
      */
     public function store(Request $request)
     {
-                //dd($request);
-                //$validatedData = $request->validate([
-                    //'nomcoach  ' => 'required|min:2',
-                    //'prenomcoach' => 'required|min:2',
-                    //'emailcoach' => 'required',
-                    //'specialite	' => 'required',
-                    //'agecoach' => 'required',
-                    //'passcoach' => 'required',
-                    //'picture' => 'required',
-                    //'address' => 'required',
-                    //'phone' => 'required',
-                    //'description' => 'required',
-                //]);
-               // $coach = new Coach;
-               // $coach->Nom = $request->nom;
+              //  dd($request);
+               $validatedData = $request->validate([
+                    'nomcoach  ' => 'required',
+                    'prenomcoach' => 'required',
+                    'emailcoach' => 'required',
+                    'passcoach' => 'required',
+            
+                'agecoach' => 'required',
+                  
+                    'picture' => 'required',
+                    'address' => 'required',
+                    'phone' => 'required',
+                    'description' => 'required',
+                    'specialite	' => 'required',
+                    'role'=>'required'
+                ]);
+                 $coach = Coach::create($validatedData);
+              /*  $coach = new Coach;
+                $coach->nomcoach = $request->nomcoach;
+                $coach->prennomcoach = $request->prennomcoach;
+                $coach->agecoach = $request->agecoach;
+                $coach->description = $request->description;
+                $coach->specialite = $request->specialite;
+                $coach->address = $request->address;
+                $coach->phone = $request->phone;
+                $coach->phone = $request->phone;
+*/
+
                // $coach->Prenom = $request->prenom;
                 //$coach->Email = $request->emailclient;
                 //$coach->age = $request->age;
                 //$coach->Speciality = $request->sport;
                 //$coach->save();
                 //2eme methode
-                //$coach = Coach::create($validatedData);
-                //return redirect()->route('admin.coach.show' ,$coach );
-        
+               
+                return redirect()->route('coaches.show' ,$coach );
+        /*
+        var_dump($request);
+        die();*/
         //
     }
 
