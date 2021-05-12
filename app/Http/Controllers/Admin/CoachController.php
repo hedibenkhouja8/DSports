@@ -25,6 +25,8 @@ class CoachController extends Controller
      */
     public function create()
     {
+        return view('admin.coach.create');
+
         //
     }
 
@@ -36,6 +38,30 @@ class CoachController extends Controller
      */
     public function store(Request $request)
     {
+                //dd($request);
+                //$validatedData = $request->validate([
+                    //'nomcoach  ' => 'required|min:2',
+                    //'prenomcoach' => 'required|min:2',
+                    //'emailcoach' => 'required',
+                    //'specialite	' => 'required',
+                    //'agecoach' => 'required',
+                    //'passcoach' => 'required',
+                    //'picture' => 'required',
+                    //'address' => 'required',
+                    //'phone' => 'required',
+                    //'description' => 'required',
+                //]);
+               // $coach = new Coach;
+               // $coach->Nom = $request->nom;
+               // $coach->Prenom = $request->prenom;
+                //$coach->Email = $request->emailclient;
+                //$coach->age = $request->age;
+                //$coach->Speciality = $request->sport;
+                //$coach->save();
+                //2eme methode
+                //$coach = Coach::create($validatedData);
+                //return redirect()->route('admin.coach.show' ,$coach );
+        
         //
     }
 
