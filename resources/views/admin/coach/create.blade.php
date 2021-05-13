@@ -78,7 +78,7 @@
 
    </div> 
    <select  name="role" value="{{ old('role') }}"  class="form-control @error('role') is-invalid @enderror" id="floatingSelect"   aria-label="Floating label select example"  name="specialite"  id="role">
-    <option value="Coach" fixed>Coach</option>
+    <option value="Coach">Coach</option>
     
 </select>
 </div>

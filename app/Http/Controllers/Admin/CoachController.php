@@ -40,7 +40,7 @@ class CoachController extends Controller
     {
                // dd($request);
         
-               $coach = new Coach;
+             /*  $coach = new Coach;
                 $coach->nomcoach = $request->nomcoach;
                 $coach->prenomcoach = $request->prenomcoach;
                 $coach->emailcoach = $request->emailcoach;
@@ -55,10 +55,10 @@ class CoachController extends Controller
                 $coach->role = $request->role;
 
 
-                $coach->save();
+                $coach->save();*/
                 //2eme methode ne veut pas marcher
-                 /*     $validatedData = $request->validate([
-                    'nomcoach  ' => 'required',
+                     $validatedData = $request->validate([
+                    'nomcoach' => 'required',
                     'prenomcoach' => 'required',
                    'emailcoach' => 'required',
                     'passcoach' => 'required',
@@ -69,10 +69,10 @@ class CoachController extends Controller
                     'address' => 'required',
                     'phone' => 'required',
                     'description' => 'required',
-                    'specialite	' => 'required',
+                    'specialite' => 'required',
                     'role'=>'required'
                 ]);
-                 $coach = Coach::create($validatedData);*/
+                 $coach = Coach::create($validatedData);
                 return redirect()->route('coaches.show' ,$coach );
         /*
         var_dump($request);
