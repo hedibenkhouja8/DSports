@@ -17,7 +17,7 @@ class CreateCoachesTable extends Migration
             $table->increments('id');
             $table->string('nomcoach');
             $table->string('prenomcoach');
-            $table->string('emailcoach');
+         $table->string('emailcoach');
             $table->string('passcoach');
             $table->integer('agecoach');
             $table->string('picture');

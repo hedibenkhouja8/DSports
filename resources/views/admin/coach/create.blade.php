@@ -1,9 +1,11 @@
 @extends('layouts.admin')
 @section('main')
+
+
 <fieldset class="container">
-    <legend>
-        <h2 class="fas fa-user-plus">Ajouter un nouveau coach</h2>
-    </legend>
+    <h2 >Add new Coach</h2>
+       
+  
     <form action="{{route('coaches.store') }} " method="post">
     @csrf
     <div class="row">
@@ -37,7 +39,7 @@
         @error('agecoach')<div class="text-danger">{{ $message }}</div>@enderror
     </div> 
    <div class="form-group col">
-    <label for="specialite" class="form-label">image</label> 
+    <label for="specialite" class="form-label">Image</label> 
     <input type="file" class="form-control  @error('picture') is-invalid @enderror" placeholder="image" value="{{ old('picture') }}"aria-label="picture" aria-describedby="basic-addon1"  name="picture"   id="picture">
     @error('picture')<div class="text-danger">{{ $message }}</div>@enderror
 </div> 
@@ -45,7 +47,7 @@
 <div class="row">
      <div class="form-group col">
         <label for="Address" class="form-label">Address</label> 
-        <input type="text" class="form-control  @error('address') is-invalid @enderror" placeholder="Adresse" value="{{ old('address') }}"aria-label="Spécialité"aria-describedby="basic-addon1"  name="address"  id="address">
+        <input type="text" class="form-control  @error('address') is-invalid @enderror" placeholder="Address" value="{{ old('address') }}"aria-label="Spécialité"aria-describedby="basic-addon1"  name="address"  id="address">
         @error('addresse')<div class="text-danger">{{ $message }}</div>@enderror
     </div> 
     <div class="form-group col">
@@ -61,7 +63,7 @@
     @error('description')<div class="text-danger">{{ $message }}</div>@enderror   
 </div>
     <div class="form-group col">
-        <label for="specialite" class="form-label">speciality</label>
+        <label for="specialite" class="form-label">Speciality</label>
         <div >
         <select  name="specialite" value="{{ old('specialite') }}"  class="form-control @error('specialite') is-invalid @enderror" id="floatingSelect"   aria-label="Floating label select example"  name="specialite"  id="specialite">
             <option value="Boxing">Boxing</option>
@@ -76,12 +78,13 @@
 
    </div> 
    <select  name="role" value="{{ old('role') }}"  class="form-control @error('role') is-invalid @enderror" id="floatingSelect"   aria-label="Floating label select example"  name="specialite"  id="role">
-    <option value="Coach">Coach</option>
+    <option value="Coach" fixed>Coach</option>
     
 </select>
 </div>
     <div class="row">
-        <button class="btn  btn-outline-primary col" type="submit"> <i class="fas fa-save"></i>Save</button>
+    
+        <button class="btn  btn-outline-primary col" type="submit"> <i class="fas fa-save"></i>Save</button><hr><p>    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
         <button class="btn btn-outline-danger col" type="reset"><i class="fas fa-window-close"></i> Cancel</button>
     </div>
     </form>

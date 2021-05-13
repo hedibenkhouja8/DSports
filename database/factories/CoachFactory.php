@@ -10,9 +10,10 @@ $factory->define(Coach::class, function (Faker $faker) {
         'nomcoach'=> $faker->firstNameMale,
         'prenomcoach'=> $faker->lastName,
         'emailcoach'=> $faker->email,
-        'picture'=> $faker->imageUrl,
         'passcoach'=> $faker->password,
         'agecoach'=> $faker->randomDigit,
+        'picture'=> $faker->imageUrl,
+       
         'address' => $faker->address,
         'phone' => $faker->e164PhoneNumber,
         'Description'=> $faker->sentence($nbWords = 10, $variableNbWords = true),
