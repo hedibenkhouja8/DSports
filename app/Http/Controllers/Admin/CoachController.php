@@ -57,23 +57,9 @@ class CoachController extends Controller
 
                 $coach->save();*/
                 //2eme methode ne veut pas marcher
-                     $validatedData = $request->validate([
-                    'nomcoach' => 'required',
-                    'prenomcoach' => 'required',
-                   'emailcoach' => 'required',
-                    'passcoach' => 'required',
-            
-                'agecoach' => 'required',
-                  
-                    'picture' => 'required',
-                    'address' => 'required',
-                    'phone' => 'required',
-                    'description' => 'required',
-                    'specialite' => 'required',
-                    'role'=>'required'
-                ]);
+                $validatedData = $request->validate($this->validationRules());
                  $coach = Coach::create($validatedData);
-                return redirect()->route('coaches.show' ,$coach );
+                return redirect()->route('coaches.show' ,$coach )->with('storeCoach', "Coach has been added successfuly");
         /*
         var_dump($request);
         die();*/
@@ -100,7 +86,7 @@ class CoachController extends Controller
      */
     public function edit(Coach $coach)
     {
-        //
+        return view('admin.coach.edit', ['coach' => $coach]);
     }
 
     /**
@@ -112,7 +98,11 @@ class CoachController extends Controller
      */
     public function update(Request $request, Coach $coach)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+        
+        $coach->update($validatedData);
+
+        return redirect()->route('coaches.show', $coach)->with('updateCoach', "Coach has been updated successfuly");
     }
 
     /**
@@ -123,6 +113,25 @@ class CoachController extends Controller
      */
     public function destroy(Coach $coach)
     {
-        //
+        $coach->delete();
+        return redirect()->route('coaches.index')->with('deleteCoach', 'Coach has been deleted');
+    }
+    private function validationRules()
+    {
+        return [
+            'nomcoach' => 'required',
+            'prenomcoach' => 'required',
+           'emailcoach' => 'required',
+       
+    
+        'agecoach' => 'required',
+          
+            'picture' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'description' => 'required',
+            'specialite' => 'required',
+            'role'=>'required'
+        ];
     }
 }

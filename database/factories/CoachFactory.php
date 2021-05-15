@@ -10,7 +10,7 @@ $factory->define(Coach::class, function (Faker $faker) {
         'nomcoach'=> $faker->firstNameMale,
         'prenomcoach'=> $faker->lastName,
         'emailcoach'=> $faker->email,
-        'passcoach'=> $faker->password,
+     
         'agecoach'=> $faker->randomDigit,
         'picture'=> $faker->imageUrl,
        

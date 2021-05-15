@@ -18,7 +18,7 @@ class CreateClientsTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('emailclient');
-            $table->string('passeclient');
+            
             $table->integer('age');
             $table->integer('coach_id')->unsigned();
             $table->enum('sport',['Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training']);
@@ -28,7 +28,7 @@ class CreateClientsTable extends Migration
             $table->string('phone');
             $table->string('picture');
             $table->timestamps();
-            $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('cascade')->onUpdate('cascade');
             $table->string('role')->default('client');
         });
     }

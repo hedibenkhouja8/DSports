@@ -11,7 +11,7 @@ $factory->define(Client::class, function (Faker $faker) {
         'nom'=> $faker->firstName,
         'prenom'=> $faker->lastName,
         'emailclient'=> $faker->email,
-        'passeclient'=> $faker->password,
+       
         'age'=> $faker->randomDigit,
         'picture' => $faker->imageUrl,
         'address' => $faker->address,

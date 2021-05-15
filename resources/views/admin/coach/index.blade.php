@@ -1,5 +1,13 @@
 @extends('layouts.admin')
 @section('main')
+@if (session('deleteCoach'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        {{ session('deleteCoach') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
 <a href="{{ route('coaches.create') }}" class="btn btn-outline-primary btn-lg float-right" ><i class="fas fa-user-plus"></i>Ajouter un nouveau coach</a>
 <br>
 <h2>This Is Your Coaches List:</h2>
@@ -29,11 +37,11 @@
 
         <td> 
             <a href="{{ route('coaches.show', ['coach' => $coach->id]) }}"><i class="far fa-eye"></i></a>
-            <a href=""><i class="far fa-trash-alt"></i></a> 
-            <a href=""><i class="fas fa-edit"></i> 
-        </td>
-
-        </tr>
+          
+           <a href="{{ route('coaches.edit', ['coach' => $coach->id]) }}"><i class="fas fa-edit"></i> </a>
+           
+                </td>
+                  </tr>
   
     @endforeach
    
