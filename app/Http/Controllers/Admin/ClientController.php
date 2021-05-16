@@ -35,22 +35,8 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-              ($request);
-                $client = new Client;
-                $client->nom = $request->nom;
-                $client->prenom = $request->prenom;
-                $client->emailclient = $request->emailclient;
-                $client->age = $request->age;
-                $client->coach_id = $request->coach_id;
-                $client->sport = $request->sport;
-                $client->datedebutabonnement = $request->datedebutabonnement;
-                $client->datefinabonnement = $request->datefinabonnement;
-                $client->address = $request->address;
-                $client->phone = $request->phone;
-                $client->picture = $request->picture;
-                $client->role = $request->role;
-                $client->save();     
+    { $validatedData = $request->validate($this->validationRules());
+        $client = Client::create($validatedData);
                 return redirect()->route('clients.show' ,$client )->with('storeClient', "Client has been added successfuly");
                 
     }
