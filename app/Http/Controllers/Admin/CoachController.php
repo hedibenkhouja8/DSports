@@ -53,6 +53,7 @@ class CoachController extends Controller
                 $coach->specialite = $request->specialite;
                
                 $coach->role = $request->role;
+                
 
 
                 $coach->save();*/

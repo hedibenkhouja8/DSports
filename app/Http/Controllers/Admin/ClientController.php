@@ -25,7 +25,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.client.create');
     }
 
     /**
@@ -36,7 +36,23 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
- 
+              ($request);
+                $client = new Client;
+                $client->nom = $request->nom;
+                $client->prenom = $request->prenom;
+                $client->emailclient = $request->emailclient;
+                $client->age = $request->age;
+                $client->coach_id = $request->coach_id;
+                $client->sport = $request->sport;
+                $client->datedebutabonnement = $request->datedebutabonnement;
+                $client->datefinabonnement = $request->datefinabonnement;
+                $client->address = $request->address;
+                $client->phone = $request->phone;
+                $client->picture = $request->picture;
+                $client->role = $request->role;
+                $client->save();     
+                return redirect()->route('clients.show' ,$client )->with('storeClient', "Client has been added successfuly");
+                
     }
 
     /**
@@ -59,7 +75,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('admin.client.edit', ['client' => $client]);
     }
 
     /**
@@ -71,7 +87,11 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+        
+        $client->update($validatedData);
+
+        return redirect()->route('clients.show', $client)->with('updateClient', "Client has been updated successfuly");
     }
 
     /**
@@ -82,6 +102,25 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+        $client->delete();
+        return redirect()->route('clients.index')->with('deleteClient', 'Client has been deleted');//
+    }
+    private function validationRules()
+    {
+        return [
+            'nom' => 'required',
+            'prenom' => 'required',
+            'emailclient' => 'required',
+            'age' => 'required',
+            'coach_id' => 'required',
+            'sport' => 'required',
+            'datedebutabonnement' => 'required',
+            'datefinabonnement' => 'required',
+            'address' => 'required',
+            'phone'=>'required',
+            'picture' => 'required',
+            'role'=>'required'
+           
+        ];
     }
 }
