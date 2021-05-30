@@ -32,3 +32,5 @@ Route::get('/admin-dashboard', function () {
 })->middleware('auth', 'admin');;
 Route::resource('clients', 'Admin\ClientController');
 Route::resource('coaches', 'Admin\CoachController');
+Route::resource('users', 'Admin\UserController');
+Route::resource('appointments', 'Admin\AppointmentController');

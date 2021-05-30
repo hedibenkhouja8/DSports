@@ -28,6 +28,18 @@
                 Clients
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users">
+                <span data-feather="file"></span><i class="fas fa-user"></i>
+                Future Coaches and Clients
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/appointments">
+                <span data-feather="file"></span><i class="fas fa-calendar-check"></i>
+                Appointments
+              </a>
+            </li>
            
           </ul>
   

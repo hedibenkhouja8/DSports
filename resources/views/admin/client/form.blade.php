@@ -32,7 +32,7 @@
     </div> 
     <div class="form-group col">
         <label for="datefinabonnement" class="form-label">date fin abonnement </label> 
-        <input type="date" class="form-control  @error('datefinabonnement') is-invalid @enderror" placeholder="datefinabonnement" value="{{ $$client->datefinabonnement ?? old('datefinabonnement') }}"aria-label="datefinabonnement"  aria-describedby="basic-addon1"  name="datefinabonnement" id="datefinabonnement">
+        <input type="date" class="form-control  @error('datefinabonnement') is-invalid @enderror" placeholder="datefinabonnement" value="{{ $client->datefinabonnement ?? old('datefinabonnement') }}"aria-label="datefinabonnement"  aria-describedby="basic-addon1"  name="datefinabonnement" id="datefinabonnement">
         @error('datefinabonnement')<div class="text-danger">{{ $message }}</div>@enderror
       </div> 
    </div>
@@ -88,4 +88,3 @@
     <button class="btn  btn-outline-primary col" type="submit"> <i class="fas fa-save"></i>Save</button><hr><p>    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
     <button class="btn btn-outline-danger col" type="reset"><i class="fas fa-window-close"></i> Cancel</button>
 </div>
-

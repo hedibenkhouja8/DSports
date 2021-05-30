@@ -20,6 +20,7 @@
             <th>Specialitie </th>
             <th>Email</th>
             <th>Age</th>
+            <th>coach_id</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -33,6 +34,7 @@
          <td>{{ $client->sport }}</td>
             <td>{{ $client->emailclient}}</td>
             <td>{{ $client->age }}</td>
+            <td>{{ $client->coach_id }}</td>
     
             <td> 
                 <a href="{{ route('clients.show', ['client' => $client->id]) }}"><i class="far fa-eye"></i></a>
