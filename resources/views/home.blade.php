@@ -36,11 +36,18 @@
                         @error('age')<div class="text-danger">{{ $message }}</div>@enderror
                        </div> 
                        <div class="form-group col">
-                        <label for="firstname" class="form-label">Specialitie</label> 
-                         
-                        <input type="text" class="form-control @error('datederendezvous') is-invalid @enderror"   placeholder="Specialitie" aria-label="Name" aria-describedby="basic-addon1" name="specialite" id="nom">
+                        <label for="specialite" class="form-label">Speciality</label>
+                        <div >
+                        <select  name="specialite" value="{{$appointment->specialite ?? old('specialite') }}"  class="form-control @error('specialite') is-invalid @enderror" id="floatingSelect"   aria-label="Floating label select example"  name="specialite"  id="specialite">
+                            <option value="Boxing">Boxing</option>
+                            <option value="Dancing">Dancing</option>
+                            <option value="Yoga">yoga</option>
+                            <option value="Swimming">Swimming</option>
+                            <option value="Cycling">Cycling</option>
+                            <option value="Weight Training ">Weight Training</option>
+                        </select>
                         @error('specialite')<div class="text-danger">{{ $message }}</div>@enderror
-                       </div> 
+                    </div> 
 
                        <div class="form-group col">
                         <label for="firstname" class="form-label">Date</label> 

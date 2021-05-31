@@ -64,11 +64,11 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <select   class="form-control" id="floatingSelect"  value="{{ old('role') }}" aria-label="Floating label select example"  name="role"  >
-                                    <option value="Coach">Coach</option>
+                                <select  name="role" value="{{$user->role ?? old('role') }}"  class="form-control @error('role') is-invalid @enderror" id="floatingSelect"   aria-label="Floating label select example"  name="role"  id="role">
                                     <option value="Client">Client</option>
                                     
-                                    
+                                    <option value="Coach">Coach</option>
+                                   
                                 </select>
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">

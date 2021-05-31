@@ -18,7 +18,7 @@ class CreateAppointmentsTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('age');
-            $table->string('specialite');
+            $table->enum('specialite',['Boxing','Dancing','Yoga','Swimming','Cycling','Weight Training']);
             $table->string('datederendezvous');
           
             $table->string('temps');
