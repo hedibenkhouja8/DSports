@@ -20,17 +20,27 @@ Route::get('/','HomeController@Welcome');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 //Route::get('/admin', 'AdminController@adminview')->name('admin');
 
+Route::middleware('auth')->group(function () {
 
-Route::get('/admin-dashboard', function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('admin')->namespace('Admin')->group(function () {
+
+    Route::get('/admin-dashboard', function () {
     
-    $admins = Admin::inRandomOrder()->limit(1)->get();
-  
-    return view('admin.dashboard');
-})->middleware('auth', 'admin');;
-Route::resource('clients', 'Admin\ClientController');
-Route::resource('coaches', 'Admin\CoachController');
-Route::resource('users', 'Admin\UserController');
-Route::resource('appointments', 'Admin\AppointmentController');
+        $admins = Admin::inRandomOrder()->limit(1)->get();
+
+      return view('admin.dashboard');
+     });
+
+     
+Route::resource('clients', 'ClientController');
+Route::resource('coaches', 'CoachController');
+Route::resource('users', 'UserController');
+Route::resource('appointments', 'AppointmentController');
+
+});
+});
