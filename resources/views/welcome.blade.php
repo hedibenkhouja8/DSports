@@ -112,7 +112,7 @@
                         <div class="col-md-12">
                             <div class="title">
                                 <h2>Check out our<strong class="black"> Clients</strong></h2>
-                                <span>take a look here</span>
+                                <p>take a look here</p>
                             </div>
                         </div>
                     </div>
@@ -123,12 +123,12 @@
                             <div class="row">
                                 <div class="col-md-12 mar_bottom">
                                     <div class="Gallery_box">
-                                       
+                                        <figure><img src="images/gallery1.jpg" alt="#" /></figure>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="Gallery_box">
-                                       
+                                        <figure><img src="images/gallery4.jpg" alt="#" /></figure>
                                     </div>
                                 </div>
                             </div>
@@ -137,37 +137,24 @@
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mar_bottom">
                                     <div class="Gallery_box">
-                                                          </div>
+                                        <figure><img src="images/gallery2.jpg" alt="#" /></figure>
+                                    </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mar_bottom">
                                     <div class="Gallery_box">
-                                          </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                    <div class="Gallery_box">
-                                     </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                    <div class="Gallery_box">
-    </div>
-                                </div>
-
-
-
-
-
-
-
-
-                                @foreach ($clients as $client)
-                            
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                    <div class="Gallery_box">
-                                        <figure><img src="{{ $client->picture }}" style="margin=20 " alt="#" /></figure>
+                                        <figure><img src="images/gallery3.jpg" alt="#" /></figure>
                                     </div>
                                 </div>
-            @endforeach
-            
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <div class="Gallery_box">
+                                        <figure><img src="images/gallery5.jpg" alt="#" /></figure>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <div class="Gallery_box">
+                                        <figure><img src="images/gallery6.jpg" alt="#" /></figure>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -21,6 +21,8 @@ Route::get('/','HomeController@Welcome');
 Auth::routes();
 
 
+
+Route::resource('appointments', 'Admin\AppointmentController');
 //Route::get('/admin', 'AdminController@adminview')->name('admin');
 
 Route::middleware('auth')->group(function () {
@@ -36,11 +38,13 @@ Route::middleware('admin')->namespace('Admin')->group(function () {
       return view('admin.dashboard');
      });
 
-     
-Route::resource('clients', 'ClientController');
-Route::resource('coaches', 'CoachController');
-Route::resource('users', 'UserController');
-Route::resource('appointments', 'AppointmentController');
+     Route::resource('clients', 'ClientController');
+     Route::resource('coaches', 'CoachController');
+     Route::resource('users', 'UserController');
+    
+});
 
 });
-});
+
+
+     
