@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Coach;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Mail\NewCoach;
+use Illuminate\Support\Facades\Mail;
 
 class CoachController extends Controller
 {
@@ -60,6 +62,8 @@ class CoachController extends Controller
                 //2eme methode ne veut pas marcher
                 $validatedData = $request->validate($this->validationRules());
                  $coach = Coach::create($validatedData);
+                 Mail::to($coach->emailcoach)->send(new NewCoach($coach));
+       
                 return redirect()->route('coaches.show' ,$coach )->with('storeCoach', "Coach has been added successfuly");
         /*
         var_dump($request);
