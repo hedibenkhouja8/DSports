@@ -37,10 +37,10 @@ class LoginController extends Controller
                 return '/admin-dashboard';
                 break;
             case 'Client':
-                return '/client-dashboard';
+                return 'home';
                  break;
             case 'Coach':
-               return '/coach-dashboard';
+               return 'home';
                  break;
 
             default:

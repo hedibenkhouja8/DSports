@@ -41,4 +41,5 @@
     {{ $appointments->links() }}
 </div>
 
+   
 @endsection

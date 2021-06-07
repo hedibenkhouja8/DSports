@@ -2,7 +2,7 @@
 @section('main')
 
 <br>
-<h2>Coahes that wants to join DSport:</h2>
+<h2>People that wants to join DSport:</h2>
 <table class="table table-striped table-light container">
     <thead class="thead-dark">
      <tr>

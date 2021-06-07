@@ -37,7 +37,8 @@ class AppointmentController extends Controller
     {
         $validatedData = $request->validate($this->validationRules());
         $appointment = Appointment::create($validatedData);
-        return view('appointmentmade');
+        return redirect()->route('appointments.show' ,$appointment );
+                
     }
 
     /**
@@ -46,9 +47,10 @@ class AppointmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Appointment $appointment)
     {
-        //
+        return view('appointmentmade', ['appointment' => $appointment]);
+ 
     }
 
     /**

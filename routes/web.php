@@ -13,6 +13,7 @@
 use App\Client;
 use App\Coach;
 use App\Admin;
+use App\Appointment;
 
 Route::get('/','HomeController@Welcome');
 //Route::get('/admin','AdminController@admin');
@@ -23,6 +24,7 @@ Auth::routes();
 
 
 Route::resource('appointments', 'Admin\AppointmentController');
+
 //Route::get('/admin', 'AdminController@adminview')->name('admin');
 
 Route::middleware('auth')->group(function () {
