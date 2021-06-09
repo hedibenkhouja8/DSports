@@ -13,7 +13,6 @@ DSports Team
 {{-- @component('mail::button', ['url' => ''])
 Button Text
 @endcomponent --}}
-
-Thanks,<br>
+<br>
 {{ config('app.name') }}
 @endcomponent

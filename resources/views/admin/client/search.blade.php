@@ -1,24 +1,16 @@
 @extends('layouts.admin')
 @section('main')
-@if (session('deleteClient'))
-    <div class="alert alert-dismissible alert-success fade show" role="alert">
-        {{ session('deleteClient') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-@endif
 
 <a href="{{ route('clients.create') }}" class="btn btn-outline-primary btn-lg float-right" ><i class="fas fa-user-plus"></i>Ajouter un nouveau client</a>
 
 <br>
 <h2 >These are your Clients List:</h2>
 <form class="form-inline" action="{{ url('/search') }}" method="get" >
-    {{ csrf_field() }}
+    
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"  name="query" style="border: solid black">
-     <button class="btn s" type="submit" style="white-space: nowrap;
-     text-align: center;"> <i class="fa fa-search"  aria-hidden="true"></i>search</button>
-  </form>
+    <button class="btn s" type="submit" style="white-space: nowrap;
+    text-align: center;"> <i class="fa fa-search"  aria-hidden="true"></i>search</button>
+ </form>
 <table class="table table-striped table-light container">
     <thead class="thead-dark">
         <tr>
@@ -59,8 +51,5 @@
    
     
 </table>
-<div class="mx-auto"  style="width: 200px;">
-    {{ $clients->links() }}
-</div>
 
 @endsection

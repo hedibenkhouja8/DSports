@@ -15,6 +15,12 @@ class CoachController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function search(){
+
+        $search_text=$_GET['query'];
+        $coaches= Coach::where('nomcoach','LIKE','%'.$search_text.'%')->get();
+        return view('admin\coach\search')->withDetails ( $coaches )->withQuery ( $search_text );;
+    }
     public function index()
     {
         return view('admin.coach.index', ['coaches' => Coach::paginate(10)]);

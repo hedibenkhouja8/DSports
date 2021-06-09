@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Mail\NewClient;
 use Illuminate\Support\Facades\Mail;
 
@@ -95,6 +94,7 @@ class ClientController extends Controller
         $client->delete();
         return redirect()->route('clients.index')->with('deleteClient', 'Client has been deleted');//
     }
+  
     private function validationRules()
     {
         return [
@@ -113,4 +113,5 @@ class ClientController extends Controller
            
         ];
     }
+  
 }
