@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent},
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'buy', loadChildren: () => import('./buy/buy.module').then(m => m.BuyModule) },
   {path: '**', component: NotFoundComponent}
 
 ];
