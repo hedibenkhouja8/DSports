@@ -10,6 +10,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contactus', component: ContactusComponent},
+  { path: '', component: HomeComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'about', component: AboutComponent},
   {path: 'feedback', component: FeedbackComponent},
